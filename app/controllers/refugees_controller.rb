@@ -3,7 +3,7 @@ class RefugeesController < ApplicationController
 
 	def index
 		@refugees = Refugee.all.order("created_at DESC")
-		@refugee = Refugee.last
+	
 	end
 
 
