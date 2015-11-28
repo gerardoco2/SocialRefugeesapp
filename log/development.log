@@ -12790,3 +12790,5 @@ Processing by RefugeesController#index as HTML
   [1m[36mRefugee Load (0.4ms)[0m  [1mSELECT "refugees".* FROM "refugees"  ORDER BY created_at DESC[0m
   Rendered refugees/index.html.erb within layouts/application (11.5ms)
 Completed 200 OK in 1127ms (Views: 1063.0ms | ActiveRecord: 1.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
