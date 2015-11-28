@@ -1,6 +1,11 @@
 
 <div class="col-md-6 col-md-offset-3">	
 <%= simple_form_for @refugee, :html => { :multipart => true } do |f| %>
+
+    <label for="picture_field"> Picture:  </label>
+   	  <%= f.file_field :picture %>
+
+   	  
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default">
 		    <div class="panel-heading" role="tab" id="headingOne">
