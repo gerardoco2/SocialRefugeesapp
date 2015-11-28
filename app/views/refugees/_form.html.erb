@@ -1,0 +1,18 @@
+
+<div class="col-md-6 col-md-offset-3">
+	
+	<%= simple_form_for @refugee, :html => { :multipart => true } do |f| %>
+	
+	<label for="picture_field"> Picture:  </label>
+   	  <%= f.file_field :picture %>
+	  <%= f.input :name, label: "Name" , required: true %>
+	  <%= f.input :age, labe: "Age", collection: 1..120 %>
+	  <%= f.input :eye_color, label: "Eye Color" %>
+	  <%= f.input :name_of_mother, label: "Name of Mother" %>
+	  <%= f.button :submit %>
+
+
+	
+  <% end %>
+</div>
+   	

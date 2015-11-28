@@ -1,0 +1,50 @@
+
+
+
+
+
+<div class="row center-block">
+	<div class="col-md-2">
+
+
+		<div class="center-block">
+	
+			<a href="#"><%= image_tag @refugee.picture.url(:thumb), class: " img-circle" %></a>
+		
+		</div>
+			
+		<ul class="nav nav-pills nav-stacked">
+ 			<li role="presentation" class="active"><a>Inbox <span class="badge" style="float:right;" >42</span></a></li>
+  			<li role="presentation"><a href="#">Profile</a></li>
+  			<li role="presentation"><a href="#">My Matches <span class="badge"  style="float:right;">4</span></a></li>
+  			<li role="presentation"><a href="#">Settings</a></li>
+		</ul>
+	</div>
+
+	<div class="col-xs-12 col-md-10 jumbotron " style="padding-left:54px; padding-right:30px;">
+		<% @refugees.each do |refugee|  %>
+		
+             
+				<div class="center-block clearfix" style="float:left; padding-right: 10px;" >
+
+						<div class="thumbnail" style="height:300px; width:200px;  box-shadow: 5px 5px 2px #b3b3b3; ">
+								<a href="/refugees/<%= refugee.id %>"><%= image_tag refugee.picture.url(:medium), class: "image " %></a>
+							
+							<div class="caption"><h4><%= link_to refugee.name, refugee %> </h4></div>
+							<!--
+							 <ul>
+							  	<li>Age: <%= refugee.age %></li>
+							  	<li>Eyes Color: <%= refugee.eye_color %></li>
+							  	<li>Name of Mother: <%= refugee.name_of_mother %></li>
+							  </ul> -->
+						</div>	 
+			   	</div>
+
+			<% end %>
+
+		</div>
+	</div>
+
+	
+
+

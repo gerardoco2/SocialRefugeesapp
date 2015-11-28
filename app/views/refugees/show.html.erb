@@ -1,0 +1,35 @@
+
+
+	
+
+
+
+
+<div class="row jumbotron">
+	<div class="col-xs-12 col-md-4">
+			<h2><%= @refugee.name %></h2>
+			<div class="thumbnail" style="width:215px; ">
+					<a href="/refugees/<%= @refugee.id %>"><%= image_tag @refugee.picture.url(:big) %></a>
+
+			</div>
+		
+	</div>
+	<div class="col-xs-12 col-md-8">
+		
+	<h2>Information:</h2>
+	<hr/>
+		<ul>
+			<li>Age:  <%= @refugee.age %> years old</li>
+			<li>Eye Color: <%= @refugee.eye_color %></li>
+			<li>Name of Mother:  <%= @refugee.name_of_mother %></li>
+		</ul>
+		<hr/>
+	</div>
+
+
+	<%= link_to "Back", root_path, class:"btn btn-default" %>
+
+<%= link_to "Edit", edit_refugee_path(@refugee), class:"btn btn-default"  %>
+<%= link_to "Delete", refugee_path(@refugee), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-default"  %>
+
+</div>
